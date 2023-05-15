@@ -1,0 +1,11 @@
+{
+  "name": "samplenode",
+  "version": "1.0.0",
+  "description": "Node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaikh Saifuddin",
+  "license": "ISC"
+}
