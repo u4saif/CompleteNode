@@ -4,8 +4,15 @@
   "description": "Node project",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shaikh Saifuddin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
 }
