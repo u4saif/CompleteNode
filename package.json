@@ -2,10 +2,10 @@
   "name": "samplenode",
   "version": "1.0.0",
   "description": "Node project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "devstart": "nodemon index.js",
+    "start": "node server.js",
+    "devstart": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shaikh Saifuddin",
