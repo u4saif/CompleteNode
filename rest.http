@@ -1,7 +1,29 @@
-POST  http://localhost:5000/login
+
+POST  http://localhost:5000/auth/register
 Content-Type: application/json
  
  {
-    "username": "dsdsfdmail.com",
-    "password": "dsgfdfdf"
+    "username": "rajas1@mail.com",
+    "password": "12345Saif"
+}
+
+#####
+
+POST   http://localhost:5000/
+Content-Type: application/json
+ 
+ {
+    "username": "raja1@mail.com",
+    "password": "12345Saif"
+}
+
+
+#####
+
+POST   http://localhost:5000/auth/login
+Content-Type: application/json
+ 
+ {
+    "username": "rajas1@mail.com",
+    "password": "12345Saif"
 }
