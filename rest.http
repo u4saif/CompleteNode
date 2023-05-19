@@ -3,13 +3,13 @@ POST  http://localhost:5000/auth/register
 Content-Type: application/json
  
  {
-    "username": "rajas1@mail.com",
-    "password": "12345Saif"
+    "username": "rajas1x@mail.com",
+    "password": "1waif"
 }
 
 #####
 
-POST   http://localhost:5000/
+POST   http://localhost:5000/refresh
 Content-Type: application/json
  
  {
@@ -24,6 +24,6 @@ POST   http://localhost:5000/auth/login
 Content-Type: application/json
  
  {
-    "username": "rajas1@mail.com",
-    "password": "1234g5Saif"
+    "username": "raa1@mail.com",
+    "password": "12345Saif"
 }
