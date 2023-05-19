@@ -1,18 +1,22 @@
 const bcrypt = require("bcryptjs");
 const users = require("../models/usersModel");
-const {getToken,decriptToken} = require("../helpers/jwtAuthToken");
-const {authSchema} = require('../helpers/validationSchema');
+const { getToken, decriptToken } = require("../helpers/jwtAuthToken");
+const { authSchema } = require("../helpers/validationSchema");
 
 const login = async (req, res, next) => {
   try {
     const getuser = await users.findOne({ username: req.body.username });
-    const compare = bcrypt.compareSync(req.body.password, getuser.password);
-    console.log("login called".warn);
-    if (compare) {
-      const token = "Bearer " + getToken({ username: req.body.username });
-      res.status(200).json({ Token: token });
+    if (getuser) {
+      const compare = bcrypt.compareSync(req.body.password, getuser.password);
+      console.log("login called".warn);
+      if (compare) {
+        const token = "Bearer " + getToken({ username: req.body.username });
+        res.status(200).json({ Token: token });
+      } else {
+        res.status(403).json({ message: "Invalid Usernam/Password" });
+      }
     } else {
-      res.status(403).json({ message: "Authentication Error" });
+      res.status(403).json({ message: "Invalid Usernam/Password" });
     }
   } catch (error) {
     if (error.isJoi == true) error.status = 422;
